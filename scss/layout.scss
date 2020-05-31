@@ -1,0 +1,166 @@
+*,*:before,*:after {
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+}
+body {
+    font-size: 1.6rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #333;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+#main {
+    width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    .slogan {
+        flex-grow: 1;
+        width: 100%;
+        text-align: center;
+        height: 90px;
+        line-height: 90px;
+        font-size: 3.6rem;
+        font-weight: 700;
+        background-color: #006ca1;
+        color: #fcc429;
+        margin: 30px 0 30px 0;
+    }
+    #info {
+        display: flex;
+        height: 300px;
+        margin-bottom: 30px;
+        .notice {
+            flex-grow: 1;
+            border: 1px solid #006ca1;
+                ul {
+                height: 100%;
+                li {
+                    height: 20%;
+                    p {
+                        padding: 20px 0 0 20px;
+                        position: relative;
+                        &:before {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            width: 4px;
+                            height: 4px;
+                            border-radius: 100%;
+                            background-color: #333;
+                            left: 10px;
+                            top: 27px
+                        }
+                    }
+                    &:nth-child(2n+1){
+                        background-color: #fff;
+                    }
+                    &:nth-child(2n){
+                        background-color: #006ca1;
+                        color: #fff;
+                        p {
+                            &:before {
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .imgBox {
+            flex-grow: 14;
+            background-image: url("../images/brooke-cagle--uHVRvDr7pg-unsplash.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0 15px;
+        }
+        .login {
+            flex-grow: 1;
+            padding: 50px 0 0 20px;
+            position: relative;
+            .inner {
+                >div {
+                    margin-bottom: 15px;
+                }
+                span {
+                    display: inline-block;
+                    width: 30px;
+                }
+                input {
+                    width: 80%;
+                    height: 25px;
+                    border: none;
+                    outline: none;
+                    border-bottom: 1px solid #999;
+                }
+                button {
+                    cursor: pointer;
+                    left: 50%;;
+                    position: absolute;
+                    display: block;
+                    width: 255px;
+                    text-align: center;
+                    height: 30px;
+                    line-height: 30px;
+                    background-color: #d9d9d9;
+                    &#loginButton {
+                        top: 55%;
+                        transform: translate(-50%, -50%);
+                    }
+                    &#signin {
+                        top: 65%;
+                        transform: translate(-50%);
+                    }
+                }
+            }
+        }
+    }
+    #rooms {
+        div {
+            cursor: pointer;
+            position: relative;
+            float: left;
+            width: 24%;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            height: 200px;
+            padding: 10px;
+            p {
+                font-size: 2.4rem;
+                font-weight: 700;
+                color: #fff;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        .room01 {
+            background-image: url("../images/room01.jpg");
+        }
+        .room02 {
+            background-image: url("../images/room02.jpg");
+        }
+        .room03 {
+            background-image: url("../images/room03.jpg");
+        }
+        .room04 {
+            background-image: url("../images/room04.jpg");
+        }.room05 {
+            background-image: url("../images/room05.jpg");
+        }
+        .room06 {
+            background-image: url("../images/room06.jpeg");
+        }
+        .room07 {
+            background-image: url("../images/room07.jpg");
+        }
+        .room08 {
+            background-image: url("../images/room08.jpeg");
+        }
+    }
+}
